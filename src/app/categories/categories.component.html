@@ -1,0 +1,106 @@
+<div class="super_container">
+
+  <!-- Header -->
+
+
+
+  <div class="fs_menu_overlay"></div>
+
+  <!-- Hamburger Menu -->
+
+
+
+  <div class="container single_product_container">
+    <div class="row">
+      <div class="col">
+
+        <!-- Breadcrumbs -->
+
+        <div class="breadcrumbs d-flex flex-row align-items-center">
+          <ul>
+            <li><a routerLink="">Home</a></li>
+            <li><a><i class="fa fa-angle-right" aria-hidden="true" routerLink="shop"></i>{{image.category | uppercase}}</a></li>
+            <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Single Product</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="single_product_pics">
+          <div class="row">
+            <div class="col-lg-3 thumbnails_col order-lg-1 order-2">
+              <div class="single_product_thumbnails">
+                <ul>
+                  <!-- <li><img src="{{image.url}}" alt=""></li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-9 image_col order-lg-2 order-1">
+              <div class="single_product_image">
+                <div class="single_product_image_background" [ngStyle]="{'background-image':'url('+ image.url +')'}"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="product_details">
+          <div class="product_details_title">
+            <h2>{{image.caption}}</h2>
+            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam
+              dolor, elementum etos lobortis des mollis ut...</p>
+          </div>
+          <div class="free_delivery d-flex flex-row align-items-center justify-content-center">
+            <span class="ti-truck"></span><span>free delivery</span>
+          </div>
+          <!-- <div class="original_price">$629.99</div> -->
+          <div class="product_price">{{image.price}} CEDIS</div>
+          <!-- <div class="product_color">
+						<span>Select Color:</span>
+						<ul>
+							<li style="background: #e54e5d"></li>
+							<li style="background: #252525"></li>
+							<li style="background: #60b3f3"></li>
+						</ul>
+					</div> -->
+          <div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
+            <span>Quantity:</span>
+            <div class="quantity_selector">
+              <span class="minus"><i class="fa fa-minus" aria-hidden="true" (click)="sub()"></i></span>
+              <span id="quantity_value">{{quantity}}</span>
+              <span class="plus"><i class="fa fa-plus" aria-hidden="true" (click)="add()"></i></span>
+            </div>
+            <div class="red_button add_to_cart_button" (click)="onHeadToCheckOut()"><a href="javascript:void(0)">add to cart</a></div>
+          </div>
+        </div>
+
+        <div [hidden]="headToCheckOut">
+          <div class="col-lg-6 get_in_touch_col">
+            <div class="get_in_touch_contents">
+              <h1>Complete Order</h1>
+              <p>Fill out your information below.</p>
+              <div>
+                <div>
+                  <input id="input_name" class="form_input input_name input_ph" type="text" name="name" placeholder="Name"
+                    required="required" data-error="Name is required.">
+                  <input id="input_email" class="form_input input_email input_ph" type="number" name="email" placeholder="Phone number"
+                    required="required" data-error="Valid email is required.">
+                  <textarea id="input_message" class="input_ph input_message" name="message" placeholder="Location"
+                    required data-error=""></textarea>
+                </div>
+                <div>
+                  <button id="review_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">Checkout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -23,9 +23,24 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/owl.carousel/dist/owl.carousel.js",
+              "./node_modules/isotope-layout/dist/isotope.pkgd.js",
+              "./node_modules/masonry-layout/dist/masonry.pkgd.min.js",
+              "./js/jquery-3.2.1.min.js",
+              "./js/custom.js",
+              "./styles/bootstrap4/popper.js",
+              "./styles/bootstrap4/bootstrap.min.js",
+              "./plugins/OwlCarousel2-2.2.1/owl.carousel.js",
+              "./plugins/easing/easing.js",
+              "./plugins/jquery-ui-1.12.1.custom/jquery-ui.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,6 +87,9 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "src/styles.css"
             ],
             "scripts": [],
