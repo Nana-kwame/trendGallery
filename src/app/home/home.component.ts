@@ -41,14 +41,6 @@ export class HomeComponent implements OnInit, OnChanges {
     console.log('Buying the trend of the week');
   }
 
-  goToHome() {
-    this.router.navigate(['/home']);
-  }
-
-  goToShop() {
-    this.router.navigate(['/shop']);
-  }
-
   sortButtonClick(sortValue: string) {
     const grid = document.querySelector('.product-grid');
     const iso = new Isotope(grid, {

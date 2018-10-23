@@ -1720,3 +1720,18 @@ section
 {
 	color: #fe4c50;
 }
+
+
+@media only screen and (max-width: 959px){
+ .sidebar[_ngcontent-c2]{
+   width: 100px;
+ }
+}
+
+@media only screen and (max-width: 320px){
+  .sidebar[_ngcontent-c2]{
+    width: 35px;
+  }
+}
+
+
