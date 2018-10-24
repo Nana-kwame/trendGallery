@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ImageService {
   visibileImages = [];
-   baseUrl = 'http://http://6549608a.ngrok.io/wp-json/wp/v2/shop';
+   baseUrl = 'http://6549608a.ngrok.io/wp-json/wp/v2/shop';
 
   constructor( public http: HttpClient) {}
   getImages() {
