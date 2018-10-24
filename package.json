@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "postinstall": "ng build --aot --prod",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --base-href https://Nana-kwame.github.io/trendGallery/ &&angular-cli-ghpages --branch gh-pages"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,9 @@
     "animejs": "^2.2.0",
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
+    "emailjs": "^2.2.0",
+    "emailjs-com": "^2.2.4",
+    "emailjs-smtp-client": "^2.0.1",
     "express": "^4.16.4",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.3.1",
@@ -47,6 +51,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/jquery": "^3.3.14",
     "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.2.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",

@@ -202,13 +202,14 @@
                       <div class="product-item women"  *ngFor="let image of (visibileImages | clothesFilter:filterBy)">
                         <div class="product" >
                           <div class="product_image" [routerLink]="['/category', image.id]">
-                            <img src="{{image.url}}" alt="">
+                           <!-- <div [ngStyle]="{'background-image':'url( image.acf.image )'}"></div> -->
+                            <img src="{{image.acf.image}}" alt="">
                           </div>
                           <div class="favorite favorite_left"></div>
-                          <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>{{image.category}}</span></div>
+                          <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>{{image.acf.category}}</span></div>
                           <div class="product_info">
-                            <h6 class="product_name"><a >{{image.caption}}</a></h6>
-                            <div class="product_price">{{image.price}}</div>
+                            <h6 class="product_name"><a >{{image.acf.caption}}</a></h6>
+                            <div class="product_price">{{image.acf.price}}</div>
 
                           </div>
                         </div>

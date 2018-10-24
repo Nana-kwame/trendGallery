@@ -17,23 +17,31 @@ declare var Isotope: any;
 })
 export class HomeComponent implements OnInit, OnChanges {
   checkout_number = false;
-  images: any[] = [];
-  newItems: any[] = [];
+  images: any;
+  newItems: any;
+  clothes: any;
   constructor(private imageService: ImageService, private router: Router) {
     this.initIsotopeFiltering();
 
   }
 
   ngOnInit() {
-    this.images = this.imageService.getImages();
-    this.newItems = this.images.slice(0, 4 );
-    console.log('what the images are: ', this.images);
-    console.log('New arrivals: ', this.newItems);
+   this.imageService.getImages().then((data: any) => {
+    this.images = data;
+    console.log('This is what is inside the clothes array ', this.images);
+     this.newItems = this.images.slice(0, 4 );
+    // console.log('what the images are: ', this.images);
+     console.log('New arrivals: ', this.newItems);
+   });
+
    this.loadScript('../../../js/custom.js');
   }
 
   ngOnChanges() {
-    this.images = this.imageService.getImages();
+    // this.images = this.imageService.getImages();
+    this.imageService.getImages().then((data: any) => {
+      this.images = data;
+    });
     this.initIsotopeFiltering();
 
   }

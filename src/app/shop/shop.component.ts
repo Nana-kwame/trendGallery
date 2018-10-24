@@ -22,17 +22,22 @@ export class ShopComponent implements OnInit, OnChanges {
   visibileImages: any[] = [];
   constructor(private imageService: ImageService) {
     console.log(this.filterBy);
-    this.visibileImages = this.imageService.getImages();
   }
 
   ngOnChanges() {
-    this.visibileImages = this.imageService.getImages();
+     this.imageService.getImages().then((res: any) => {
+       this.visibileImages = res;
+      console.log(this.visibileImages);
+     });
     this.initIstopeFiltering();
     // this.initPriceSlider();
   }
 
   ngOnInit() {
-    this.visibileImages = this.imageService.getImages();
+    this.imageService.getImages().then((res: any) => {
+      this.visibileImages = res;
+     console.log(this.visibileImages);
+    });
   }
 
   initPriceSlider() {

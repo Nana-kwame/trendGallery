@@ -1305,7 +1305,8 @@ section
 {
 	width: 250px;
 	height: 380px;
-	cursor: pointer;
+  cursor: pointer;
+  margin: 40px;
 }
 .product-item::after
 {
@@ -1338,11 +1339,14 @@ section
 }
 .product_image
 {
-	/* width: 100%; */
+	width: 100%;
 }
 .product_image img
 {
-	/* width: 100%; */
+  max-width: 380px;
+  /* max-height: 370px; */
+  height: 370px;
+	width: 100%;
 }
 .product_info
 {

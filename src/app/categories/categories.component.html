@@ -19,7 +19,7 @@
         <div class="breadcrumbs d-flex flex-row align-items-center">
           <ul>
             <li><a routerLink="">Home</a></li>
-            <li><a><i class="fa fa-angle-right" aria-hidden="true" routerLink="shop"></i>{{image.category | uppercase}}</a></li>
+            <li><a><i class="fa fa-angle-right" aria-hidden="true" routerLink="shop"></i>{{image.acf.category | uppercase}}</a></li>
             <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Single Product</a></li>
           </ul>
         </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-lg-9 image_col order-lg-2 order-1">
               <div class="single_product_image">
-                <div class="single_product_image_background" [ngStyle]="{'background-image':'url('+ image.url +')'}"></div>
+                <div class="single_product_image_background" [ngStyle]="{'background-image':'url('+ image.acf.image +')'}"></div>
               </div>
             </div>
           </div>
@@ -49,15 +49,14 @@
       <div class="col-lg-5">
         <div class="product_details">
           <div class="product_details_title">
-            <h2>{{image.caption}}</h2>
-            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam
-              dolor, elementum etos lobortis des mollis ut...</p>
+            <h2>{{image.acf.caption}}</h2>
+            <p>{{image.acf.description}}</p>
           </div>
           <div class="free_delivery d-flex flex-row align-items-center justify-content-center">
             <span class="ti-truck"></span><span>free delivery</span>
           </div>
           <!-- <div class="original_price">$629.99</div> -->
-          <div class="product_price">{{image.price}} CEDIS</div>
+          <div class="product_price">{{image.acf.price}} CEDIS</div>
           <!-- <div class="product_color">
 						<span>Select Color:</span>
 						<ul>
@@ -84,15 +83,14 @@
               <p>Fill out your information below.</p>
               <div>
                 <div>
-                  <input id="input_name" class="form_input input_name input_ph" type="text" name="name" placeholder="Name"
-                    required="required" data-error="Name is required.">
-                  <input id="input_email" class="form_input input_email input_ph" type="number" name="email" placeholder="Phone number"
-                    required="required" data-error="Valid email is required.">
-                  <textarea id="input_message" class="input_ph input_message" name="message" placeholder="Location"
-                    required data-error=""></textarea>
+                  <input class="form_input input_name input_ph" type="text" placeholder="Name" [(ngModel)]="customerName">
+                  <input id="input_email" class="form_input input_email input_ph" type="email" name="email" placeholder="Email"
+                    required="required" data-error="Valid email is required." [(ngModel)]="customerEmail">
+                  <input type="number" class="form_input input_name input_ph" [(ngModel)]="customerPhoneNumber" placeholder="Phone Number">
+                  <textarea id="input_message" class="input_ph input_message" name="message" placeholder="Location" [(ngModel)]="customerLocation"></textarea>
                 </div>
                 <div>
-                  <button id="review_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">Checkout</button>
+                  <button class="red_button message_submit_btn trans_300"  (click)="emailButton()">Checkout</button>
                 </div>
               </div>
             </div>

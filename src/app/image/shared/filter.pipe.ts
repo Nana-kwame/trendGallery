@@ -10,7 +10,7 @@ export class FilterPipe implements PipeTransform {
      return items;
    } else {
      return items.filter(item => {
-       return item.category === criteria;
+       return item.acf.category === criteria;
      });
    }
   }
