@@ -36,7 +36,7 @@ const IMAGES = [
     caption: 'Coulier Watch',
     description: 'The stylish watch for the stlyish man. Limited in quantity place your order now',
     price: 300,
-    url: '../../../../images/IMG_2093.JPG'
+    url: '../../../assets/images/IMG_2093.JPG'
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ const IMAGES = [
     caption: 'Cartier Watch',
     description: 'Get the watch for yourself and the special partner, this watch is the perfect anniversy gift',
     price: 400,
-    url: '../../../../images/IMG_2094.JPG'
+    url: '../../../assets/images/IMG_2094.JPG'
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ const IMAGES = [
     caption: 'Supreme Hoodie',
     description: 'Cool hoodies, comes in different colors too',
     price: 325,
-    url: '../../../../images/IMG_2096.JPG'
+    url: '../../../assets/images/IMG_2096.JPG'
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const IMAGES = [
     caption: 'Crop Top',
     description: 'Suede crop top for the stlyish afternoon out',
     price: 300,
-    url: '../../../../images/IMG_2095.JPG'
+    url: '../../../assets/images/IMG_2095.JPG'
   },
   {
     id: 5,
@@ -68,7 +68,7 @@ const IMAGES = [
     caption: 'Supreme Camo Cap',
     description: 'Accessorise your outfit with this hat. It goes with almost everything',
     price: 225,
-    url: '../../../../images/IMG_2097.JPG'
+    url: '../../../assets/images/IMG_2097.JPG'
   },
   {
     id: 6,
@@ -76,7 +76,7 @@ const IMAGES = [
     caption: 'Polka Dot sundress',
     description: 'Summer is over but you can still show off your legs in this awesome banger of a dress',
     price: 525,
-    url: '../../../../images/IMG_2098.JPG'
+    url: '../../../assets/images/IMG_2098.JPG'
   },
   {
     id: 7,
@@ -84,7 +84,7 @@ const IMAGES = [
     caption: 'Denim Jacket',
     description: 'Awesome denim jacket for the stylish young ad outgoing girl',
     price: 423,
-    url: '../../../../images/IMG_2099.JPG'
+    url: '../../../assets/images/IMG_2099.JPG'
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ const IMAGES = [
     caption: 'Red dress',
     description: 'Hey you with the red dress on I wanna find a way to take it off you',
     price: 600,
-    url: '../../../../images/IMG_2100.JPG'
+    url: '../../../assets/images/IMG_2100.JPG'
   },
   {
     id: 9,
@@ -100,7 +100,7 @@ const IMAGES = [
     caption: 'Yeezy',
     description: 'Best Shoes in the world',
     price: 700,
-    url: '../../../../images/IMG_2101.JPG'
+    url: '../../../assets/images/IMG_2101.JPG'
   },
   {
     id: 10,
@@ -108,7 +108,7 @@ const IMAGES = [
     caption: 'High Tops',
     description: 'Best Shoes in the world',
     price: 500,
-    url: '../../../../images/IMG_2102.JPG'
+    url: '../../../assets/images/IMG_2102.JPG'
   }
   ,
   {
@@ -117,7 +117,7 @@ const IMAGES = [
     caption: 'Bundled outfit',
     description: 'Suscribe to this product and get the full set of outfits at a discount. Smash the suscribe button to get an alert.',
     price: 6069,
-    url: '../../../../images/IMG_2122.JPG'
+    url: '../../../assets/images/IMG_2122.JPG'
   }
 ];
 
