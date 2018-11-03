@@ -19,7 +19,7 @@
         <div class="breadcrumbs d-flex flex-row align-items-center">
           <ul>
             <li><a routerLink="">Home</a></li>
-            <li><a><i class="fa fa-angle-right" aria-hidden="true" routerLink="shop"></i>{{image.acf.category | uppercase}}</a></li>
+            <li><a><i class="fa fa-angle-right" aria-hidden="true" routerLink="shop"></i>{{image.category | uppercase}}</a></li>
             <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Single Product</a></li>
           </ul>
         </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-lg-9 image_col order-lg-2 order-1">
               <div class="single_product_image">
-                <div class="single_product_image_background" [ngStyle]="{'background-image':'url('+ image.acf.image +')'}"></div>
+                <div class="single_product_image_background" [ngStyle]="{'background-image':'url('+ image.url +')'}"></div>
               </div>
             </div>
           </div>
@@ -49,14 +49,14 @@
       <div class="col-lg-5">
         <div class="product_details">
           <div class="product_details_title">
-            <h2>{{image.acf.caption}}</h2>
-            <p>{{image.acf.description}}</p>
+            <h2>{{image.caption}}</h2>
+            <p>{{image.description}}</p>
           </div>
           <div class="free_delivery d-flex flex-row align-items-center justify-content-center">
             <span class="ti-truck"></span><span>free delivery</span>
           </div>
           <!-- <div class="original_price">$629.99</div> -->
-          <div class="product_price">{{image.acf.price}} CEDIS</div>
+          <div class="product_price">{{image.price}} CEDIS</div>
           <!-- <div class="product_color">
 						<span>Select Color:</span>
 						<ul>

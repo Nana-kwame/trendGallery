@@ -25,19 +25,26 @@ export class ShopComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-     this.imageService.getImages().then((res: any) => {
-       this.visibileImages = res;
-      console.log(this.visibileImages);
-     });
-    this.initIstopeFiltering();
+    //  this.imageService.getImages().then((res: any) => {
+    //    this.visibileImages = res;
+    //   console.log(this.visibileImages);
+    //  });
+    // this.initIstopeFiltering();
+
     // this.initPriceSlider();
+
+    this.visibileImages = this.imageService.getImages();
+    console.log(this.visibileImages);
   }
 
   ngOnInit() {
-    this.imageService.getImages().then((res: any) => {
-      this.visibileImages = res;
-     console.log(this.visibileImages);
-    });
+    // this.imageService.getImages().then((res: any) => {
+    //   this.visibileImages = res;
+    //  console.log(this.visibileImages);
+    // });
+
+    this.visibileImages = this.imageService.getImages();
+
   }
 
   initPriceSlider() {

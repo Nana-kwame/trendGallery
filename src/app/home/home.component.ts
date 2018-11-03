@@ -3,7 +3,7 @@ import { Component, OnInit, ViewEncapsulation, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
 declare var $: any;
 declare var Isotope: any;
-
+declare const butter: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -22,28 +22,29 @@ export class HomeComponent implements OnInit, OnChanges {
   clothes: any;
   constructor(private imageService: ImageService, private router: Router) {
     this.initIsotopeFiltering();
-
   }
 
   ngOnInit() {
-   this.imageService.getImages().then((data: any) => {
-    this.images = data;
-    console.log('This is what is inside the clothes array ', this.images);
-     this.newItems = this.images.slice(0, 4 );
-    // console.log('what the images are: ', this.images);
-     console.log('New arrivals: ', this.newItems);
-   });
+    //  this.imageService.getImages().then((data: any) => {
+    //   this.images = data;
+    //   console.log('This is what is inside the clothes array ', this.images);
+    //    this.newItems = this.images.slice(0, 4 );
+    //   // console.log('what the images are: ', this.images);
+    //    console.log('New arrivals: ', this.newItems);
+    //  });
 
-   this.loadScript('../../../js/custom.js');
+    this.loadScript('../../../js/custom.js');
+    this.images = this.imageService.getImages();
+    this.newItems = this.images.slice(0, 6);
+    console.log(this.images);
   }
 
   ngOnChanges() {
-    // this.images = this.imageService.getImages();
-    this.imageService.getImages().then((data: any) => {
-      this.images = data;
-    });
+    this.images = this.imageService.getImages();
+    // this.imageService.getImages().then((data: any) => {
+    //   this.images = data;
+    // });
     this.initIsotopeFiltering();
-
   }
   buyTrendofTheWeek() {
     console.log('Buying the trend of the week');
@@ -57,7 +58,7 @@ export class HomeComponent implements OnInit, OnChanges {
   }
 
   public loadScript(url: string) {
-    const body = <HTMLDivElement> document.body;
+    const body = <HTMLDivElement>document.body;
     const script = document.createElement('script');
     script.innerHTML = '';
     script.src = url;
