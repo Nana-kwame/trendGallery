@@ -117,7 +117,7 @@ const IMAGES = [
     caption: 'Bundled outfit',
     description: 'Suscribe to this product and get the full set of outfits at a discount. Smash the suscribe button to get an alert.',
     price: 6069,
-    url: '../../../assets/images/IMG_2122.JPG'
+    url: '../../../assets/images/IMG_2122.PNG'
   }
 ];
 

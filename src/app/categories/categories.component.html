@@ -90,7 +90,7 @@
                   <textarea id="input_message" class="input_ph input_message" name="message" placeholder="Location" [(ngModel)]="customerLocation"></textarea>
                 </div>
                 <div>
-                  <button class="red_button message_submit_btn trans_300"  (click)="emailButton()">Checkout</button>
+                  <button class="red_button message_submit_btn trans_300"  (click)="emailButton()" [disabled]='!orderDetails'>Checkout</button>
                 </div>
               </div>
             </div>

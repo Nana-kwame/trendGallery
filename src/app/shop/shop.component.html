@@ -69,27 +69,28 @@
 
         <div class="breadcrumbs d-flex flex-row align-items-center">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Shop</a></li>
+            <li class="sidebar_title"><a>Categories</a></li>
+            <li><a href="javascript:void(0)" (click)="filterBy = 'all'" ><i class="fa fa-angle-right" aria-hidden="true"></i>All</a></li>
+            <li><a href="javscript:void(0)"  (click)="filterBy = 'men'">Men</a></li>
+              <li><a href="javscript:void(0)"  (click)="filterBy = 'women' ">Women</a></li>
+              <li><a href="javscript:void(0)">Accessories</a></li>
+              <!-- <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Collection</a></li> -->
+              <!-- <li><a href="javscript:void(0)"  (click)="filterBy = 'all' ">Shop</a></li> -->
           </ul>
         </div>
 
         <!-- Sidebar -->
 
         <div class="sidebar">
-          <div class="sidebar_section">
+          <!-- <div class="sidebar_section">
             <div class="sidebar_title">
               <h5>Product Category</h5>
             </div>
             <ul class="sidebar_categories">
-              <li><a href="javscript:void(0)"  (click)="filterBy = 'men'">Men</a></li>
-              <li><a href="javscript:void(0)"  (click)="filterBy = 'women' ">Women</a></li>
-              <li><a href="#">Accessories</a></li>
-              <!-- <li><a href="#">New Arrivals</a></li>
-              <li><a href="#">Collection</a></li> -->
-              <li><a href="javscript:void(0)"  (click)="filterBy = 'all' ">Shop</a></li>
+
             </ul>
-          </div>
+          </div> -->
 
           <!-- Price Range Filtering -->
           <!-- <div class="sidebar_section">
@@ -209,7 +210,7 @@
                           <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>{{image.category}}</span></div>
                           <div class="product_info">
                             <h6 class="product_name"><a >{{image.caption}}</a></h6>
-                            <div class="product_price">{{image.price}}</div>
+                            <div class="product_price">&#8373; {{image.price}}</div>
 
                           </div>
                         </div>

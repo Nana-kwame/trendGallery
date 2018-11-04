@@ -596,13 +596,15 @@
 	}
 	.navbar
 	{
-		height: 70px;
+    height: 70px;
+    text-align: center;
 	}
 	.navbar_user li a
 	{
 		width: 30px;
 		height: 30px;
-		font-size: 12px;
+    font-size: 12px;
+    display: inline-block;
 	}
 	.checkout_items
 	{
@@ -803,10 +805,10 @@
 14. 400px
 ************/
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 360px)
 {
 .navbar {
-
+right:9% ;
 }
 }
 

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 //  const email = require('./../../../node_modules/emailjs/email');
 import * as emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -49,16 +51,22 @@ export class CategoriesComponent implements OnInit {
       to_name: 'TrendGallery',
       message_html: 'Customer name: ' + this.customerName + '<br>' +
        'Customer Phone Number: ' + this.customerPhoneNumber + '<br>' +
-        ' Order: Item Name: ' + this.image.caption + ', Quantity - ' + this.quantity
+       'Customer location: ' + this.customerLocation + '<br> ' +
+      ' Order: Item Name: ' + this.image.caption + ', Quantity - ' + this.quantity + '<br>'
+
     };
     emailjs.send('gmail', 'order_form', templateParams , 'user_UmtTVPTPGuXEWtww2PcNx').then(
       (res: any) => {
         console.log('Successful ', res.status, res.text);
+        Swal('Your order has been recieved and you will be contacted shortly. Thank you');
       },
       (err: any) => {
+        Swal('Sorry we seem to be having some technical difficulties at the moment');
         console.log('Failed', err);
       }
     );
+
+
     // const server = email.server.connect({
     //   user: 'nacheampong@123gmail.com',
     //   password: '@dom@ko@21',
@@ -74,5 +82,9 @@ export class CategoriesComponent implements OnInit {
     // }, function(err, message) {
     //   console.log(err || message);
     // });
+  }
+
+  get orderDetails() {
+   return this.customerEmail && this.customerLocation && this.customerName && this.customerPhoneNumber;
   }
 }

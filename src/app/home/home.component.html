@@ -10,7 +10,7 @@
 
   <!-- Slider -->
 
-  <div class="main_slider" style="background-image:url(../../../../assets/images/slider_1.jpg)">
+  <div class="main_slider">
     <div class="container fill_height">
       <div class="row align-items-center fill_height">
         <div class="col">
@@ -27,22 +27,22 @@
   <div class="banner">
     <div class="container">
       <div class="row">
-        <div class="col-md-4" routerLink="shop">
-          <div class="banner_item align-items-center" style="background-image:url(../../../../assets/images/banner_1.jpg)">
+        <div class="col-md-4" [routerLink]="['/shop', 'women']">
+          <div class="banner_item align-items-center" style="background-image:url(../../../../assets/images/philipe-cavalcante-571672-unsplash.jpg)">
             <div class="banner_category">
               <a routerLink="shop">women's</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4" routerLink="shop">
-          <div class="banner_item align-items-center" style="background-image:url(../../../../../assets/images/banner_2.jpg)">
+        <div class="col-md-4" [routerLink]="['/shop', 'accessories']">
+          <div class="banner_item align-items-center" style="background-image:url(../../../../assets/images/alexandru-acea-674023-unsplash.jpg)">
             <div class="banner_category">
-              <a routerLink="shop">accessories's</a>
+              <a routerLink="shop">accessories</a>
             </div>
           </div>
         </div>
         <div class="col-md-4" [routerLink]="['/shop','men']">
-          <div class="banner_item align-items-center" style="background-image:url(../../../../../assets/images/banner_3.jpg)">
+          <div class="banner_item align-items-center" style="background-image:url(../../../../assets/images/connor-botts-733660-unsplash.jpg)">
             <div class="banner_category">
               <a routerLink="shop">men's</a>
             </div>
