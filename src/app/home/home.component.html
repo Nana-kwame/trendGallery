@@ -28,21 +28,21 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4" [routerLink]="['/shop', 'women']">
-          <div class="banner_item align-items-center" style="background-image:url(../../../../assets/images/philipe-cavalcante-571672-unsplash.jpg)">
+          <div class="banner_item align-items-center" [style.backgroundImage]="'url(' +women_cat_image+ ')'">
             <div class="banner_category">
               <a routerLink="shop">women's</a>
             </div>
           </div>
         </div>
         <div class="col-md-4" [routerLink]="['/shop', 'accessories']">
-          <div class="banner_item align-items-center" style="background-image:url(../../../../assets/images/alexandru-acea-674023-unsplash.jpg)">
+          <div class="banner_item align-items-center" [style.backgroundImage]="'url(' +access_cat_image+ ')'">
             <div class="banner_category">
               <a routerLink="shop">accessories</a>
             </div>
           </div>
         </div>
         <div class="col-md-4" [routerLink]="['/shop','men']">
-          <div class="banner_item align-items-center" style="background-image:url(../../../../assets/images/connor-botts-733660-unsplash.jpg)">
+          <div class="banner_item align-items-center" [style.backgroundImage]="'url(' +men_cat_image+ ')'">
             <div class="banner_category">
               <a routerLink="shop">men's</a>
             </div>
@@ -109,7 +109,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="deal_ofthe_week_img">
-            <img src="../../../assets/images/deal_ofthe_week.png" alt="">
+            <img id="weekTrend"  alt="">
           </div>
         </div>
         <div class="col-lg-6 text-right deal_ofthe_week_col">

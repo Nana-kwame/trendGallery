@@ -805,13 +805,19 @@
 14. 400px
 ************/
 
-@media only screen and (max-width: 360px)
+@media only screen and (max-width: 375px)
 {
 .navbar {
-right:9% ;
+right:10%;
 }
 }
 
+@media only screen and (max-width: 320px)
+{
+.navbar {
+right:4%;
+}
+}
 
 
 

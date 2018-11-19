@@ -1,6 +1,7 @@
 import { ImageService } from './../image/shared/image.service';
-import { Component, OnInit, ViewEncapsulation, OnChanges } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, OnChanges, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 declare var $: any;
 declare var Isotope: any;
 declare const butter: any;
@@ -15,29 +16,27 @@ declare const butter: any;
     '../../../plugins/OwlCarousel2-2.2.1/owl.theme.default.css'
   ]
 })
-export class HomeComponent implements OnInit, OnChanges {
+export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   checkout_number = false;
   images: any;
   newItems: any;
   clothes: any;
+  women_cat_image: any;
+  men_cat_image: any;
+  access_cat_image: any;
+  trend_of_the_week_img: any;
   constructor(private imageService: ImageService, private router: Router) {
     this.initIsotopeFiltering();
   }
 
   ngOnInit() {
-    //  this.imageService.getImages().then((data: any) => {
-    //   this.images = data;
-    //   console.log('This is what is inside the clothes array ', this.images);
-    //    this.newItems = this.images.slice(0, 4 );
-    //   // console.log('what the images are: ', this.images);
-    //    console.log('New arrivals: ', this.newItems);
-    //  });
-
     this.loadScript('../../../js/custom.js');
     this.images = this.imageService.getImages();
     this.newItems = this.images.slice(0, 6);
     console.log(this.images);
-  }
+    this.trend_of_the_week_img = document.getElementById('weekTrend') as HTMLImageElement;
+    this.trend_of_the_week_img.src = '../../assets/images/ye-fung-tchen-766230-unsplash-min.jpg';
+     }
 
   ngOnChanges() {
     this.images = this.imageService.getImages();
@@ -148,5 +147,12 @@ export class HomeComponent implements OnInit, OnChanges {
         }
       }
     }
+  }
+
+  ngAfterViewInit() {
+    this.women_cat_image = '../../assets/images/philipe-cavalcante-571672-unsplash-min.jpg';
+    this.men_cat_image = '../../assets/images/connor-botts-733660-unsplash-min.jpg';
+    this.access_cat_image = '../../assets/images/alexandru-acea-674023-unsplash-min.jpg';
+
   }
 }
