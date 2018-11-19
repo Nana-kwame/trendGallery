@@ -81,7 +81,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <isotope-grid [options]="{itemSelector: '.product-item', 'getSortData': {'category': '.category'}}">
+          <isotope-grid class="isotope-grid" [options]="{itemSelector: '.product-item', 'getSortData': {'category': '.category'}}">
             <isotope-item class="product-item" *ngFor="let image of newItems" >
               <div class="product product_filter">
                 <div class="product_image" [routerLink]="['/category', image.id]">
@@ -114,7 +114,7 @@
         </div>
         <div class="col-lg-6 text-right deal_ofthe_week_col">
           <div class="deal_ofthe_week_content d-flex flex-column align-items-center float-right">
-            <div class="section_title">
+            <div class="section_title trend">
               <h2>Trend Of The Week</h2>
             </div>
             <div class="deal_of_the_week_button" (click)="buyTrendofTheWeek()"><a href="javascript:void(0)">shop now</a></div>

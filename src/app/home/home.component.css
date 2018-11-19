@@ -1594,4 +1594,95 @@ section {
     /* background-size: 250% auto !important; */
     /* background-image: url('../../assets/images/blog_1.jpg') */
   }
+
+  .trend {
+    padding: .8em;
+  }
+
+  .deal_of_the_week_button {
+    margin-bottom: 2em;
+  }
+
+  #weekTrend {
+    transform: translateX(-4.5%)
+  }
+
+
 }
+
+@media only screen and (max-width: 411px){
+  .trend {
+    padding: .8em;
+  }
+
+  .deal_of_the_week_button {
+    margin-bottom: 2em;
+  }
+
+  #weekTrend {
+    transform: translateX(2.5%)
+  }
+
+  .deal_ofthe_week_content{
+    transform: translateX(-12%)
+  }
+
+}
+@media only screen and (max-width: 320px){
+  .trend {
+    padding: .8em;
+  }
+
+  .deal_of_the_week_button {
+    margin-bottom: 2em;
+  }
+
+  #weekTrend {
+    transform: translateX(-3.5%)
+  }
+
+  .deal_ofthe_week_content{
+    transform: translateX(2.7%) !important;
+  }
+
+  .isotope-grid{
+    transform: translateX(-8%);
+  }
+}
+
+@media only screen and (max-width: 375px){
+  #weekTrend {
+    width: 108%;
+    transform: translateX(-4%)
+  }
+}
+
+@media only screen and (max-width: 414px){
+  #weekTrend {
+    width: 108%;
+    transform: translateX(-4%)
+  }
+
+  .trend {
+    padding: .8em;
+  }
+
+  .deal_of_the_week_button {
+    margin-bottom: 2em;
+  }
+
+  #weekTrend {
+    transform: translateX(-3.5%)
+  }
+
+  .deal_ofthe_week_content{
+    transform: translateX(-13%);
+  }
+
+}
+
+/* @media only screen and (max-width: 768px){
+.deal_ofthe_week_content{
+  transform: translateY(-202%);
+}
+} */

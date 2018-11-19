@@ -154,9 +154,6 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.women_cat_image = '../../assets/images/philipe-cavalcante-571672-unsplash-min.jpg';
-    this.men_cat_image = '../../assets/images/connor-botts-733660-unsplash-min.jpg';
-    this.access_cat_image = '../../assets/images/alexandru-acea-674023-unsplash-min.jpg';
 
   }
 }
