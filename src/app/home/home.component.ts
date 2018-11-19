@@ -36,7 +36,11 @@ export class HomeComponent implements OnInit, OnChanges, AfterViewInit {
     console.log(this.images);
     this.trend_of_the_week_img = document.getElementById('weekTrend') as HTMLImageElement;
     this.trend_of_the_week_img.src = '../../assets/images/ye-fung-tchen-766230-unsplash-min.jpg';
-     }
+
+    this.women_cat_image = '../../assets/images/philipe-cavalcante-571672-unsplash-min.jpg';
+    this.men_cat_image = '../../assets/images/connor-botts-733660-unsplash-min.jpg';
+    this.access_cat_image = '../../assets/images/alexandru-acea-674023-unsplash-min.jpg';
+  }
 
   ngOnChanges() {
     this.images = this.imageService.getImages();
